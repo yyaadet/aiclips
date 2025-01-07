@@ -2,10 +2,20 @@
 
 AI video clips tool for macOS.
 
-## Note:
+## Features
 
-- Developing, maybe publish in 2025.02.01
+- Clip video base on subtitles
+- Extract short video clips from video
+- Set clip context duration
+
+## Best Partners
+
+- [AutoSRT](yyaadet.github.io/autosrt_page/)
 
 ## AIClips in action
 
 ![home](https://raw.githubusercontent.com/yyaadet/aiclips/screenshots/home.png)
+
+## Note:
+
+- Developing, maybe publish in 2025.02.01
