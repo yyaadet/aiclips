@@ -10,7 +10,7 @@ AI video clips tool for macOS.
 
 ## Best Partners
 
-- [AutoSRT](yyaadet.github.io/autosrt_page/)
+- [AutoSRT: Save hours with instant AI dual language subtitle generation. 100% offline and native on your Mac for complete privacy. Free forever.](https://yyaadet.github.io/autosrt_page/)
 
 ## AIClips in action
 
