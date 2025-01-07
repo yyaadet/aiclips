@@ -14,7 +14,7 @@ AI video clips tool for macOS.
 
 ## AIClips in action
 
-![home](https://raw.githubusercontent.com/yyaadet/aiclips/screenshots/home.png)
+![home](https://raw.githubusercontent.com/yyaadet/aiclips/raw/main/screenshots/home.png)
 
 ## Note:
 
