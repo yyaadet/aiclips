@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIClips - AI-powered video clip extraction tool for macOS. Support 50+ languages, automatic subtitle-based clipping, and smart context duration control.">
+    <meta name="keywords" content="AIClips, video editor, macOS app, AI video editing, video clips, multilingual support, subtitle extraction, video highlights">
+    <meta name="author" content="AIClips">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="AIClips - Smart Video Clip Extraction for macOS">
+    <meta property="og:description" content="Find and extract interesting clips from your videos automatically. Supports 50+ languages with intelligent subtitle-based clipping.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yyaadet.github.io/aiclips/">
+    <title>AIClips - Smart Video Clip Extraction | macOS App</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ELY86PR1Q"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3ELY86PR1Q');
+    </script>
+    <style>
+        :root {
+            --primary-color: #60a5fa;
+            --primary-dark: #3b82f6;
+            --bg-dark: #111827;
+            --bg-card: #1f2937;
+            --text-primary: #f3f4f6;
+            --text-secondary: #d1d5db;
+            --accent: #60a5fa;
+            --spacing: 20px;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-dark);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .hero {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #60a5fa, #93c5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .tagline {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: var(--text-secondary);
+        }
+        
+        .features {
+            padding: 60px 0;
+            background: var(--bg-dark);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .languages {
+            padding: 60px 0;
+            background: var(--bg-dark);
+        }
+        
+        .language-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .language-tag {
+            background: var(--bg-card);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .language-tag:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+        
+        .partners {
+            padding: 60px 0;
+            background: var(--bg-dark);
+        }
+        
+        .partner-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-top: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-5px);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .partner-content h3 {
+            color: var(--primary-color);
+        }
+        
+        .partner-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+        
+        .partner-content {
+            flex: 1;
+        }
+        
+        .screenshot {
+            width: 100%;
+            max-width: 800px;
+            margin: 40px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+        }
+        
+        h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        p {
+            color: var(--text-secondary);
+        }
+        
+        .download-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #60a5fa, #3b82f6);
+            color: white;
+            padding: 8px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            margin-left: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+        }
+        
+        .button-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .github-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(31, 41, 55, 0.8);
+            padding: 5px 10px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+        }
+
+        @media (max-width: 768px) {
+            .github-button {
+                position: absolute;
+            }
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+        }
+        
+        .demo {
+            padding: 60px 0;
+            background: var(--bg-dark);
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "AIClips",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "macOS",
+        "description": "AI video clips tool for macOS. Find your interesting clips from video with support for 50+ languages.",
+        "offers": {
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock"
+        },
+        "featureList": [
+            "Clip video based on subtitles",
+            "Extract short video clips from long videos",
+            "Set clip context duration",
+            "Support for 50+ languages"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <div class="github-button">
+        <iframe src="https://ghbtns.com/github-btn.html?user=yyaadet&repo=aiclips&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+    </div>
+    <header>
+        <div class="container">
+            <div class="hero">
+                <img src="images/aiclips.png" alt="AIClips Logo" class="hero-image" style="max-width: 200px; margin-bottom: 30px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <h1>AIClips</h1>
+                <p class="tagline">Find your interesting clips from video with AI-powered intelligence</p>
+                <div class="button-container">
+                    <a href="https://github.com/yyaadet/aiclips/releases/latest" class="download-button">
+                        Download for Mac
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Free & Native</h3>
+                    <p>Free and localized, running natively on your Mac for the best performance and user experience.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Subtitle-Based Clipping</h3>
+                    <p>Automatically extract clips based on subtitle content, making it easy to find and save important moments.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Smart Extraction</h3>
+                    <p>Extract short video clips from longer videos with intelligent content analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Context Control</h3>
+                    <p>Fine-tune your clips by adjusting the context duration to capture the perfect moment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="languages">
+        <div class="container">
+            <h2>Multilingual Support</h2>
+            <p style="text-align: center; margin-bottom: 30px;">AIClips supports over 50 languages, making it a truly global tool for content creators.</p>
+            <div class="language-cloud">
+                <span class="language-tag">Arabic</span>
+                <span class="language-tag">Bulgarian</span>
+                <span class="language-tag">English</span>
+                <span class="language-tag">Spanish</span>
+                <span class="language-tag">French</span>
+                <span class="language-tag">German</span>
+                <span class="language-tag">Japanese</span>
+                <span class="language-tag">Korean</span>
+                <span class="language-tag">Russian</span>
+                <span class="language-tag">Chinese</span>
+                <span class="language-tag">And 40+ more...</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners">
+        <div class="container">
+            <h2>Best Partners</h2>
+            <a href="https://yyaadet.github.io/autosrt_page/" target="_blank" class="partner-card">
+                <img src="images/autosrt.png" alt="AutoSRT Logo" class="partner-image">
+                <div class="partner-content">
+                    <h3>AutoSRT</h3>
+                    <p>Save hours with instant AI dual language subtitle generation. 100% offline and native on your Mac for complete privacy. Free forever.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="demo">
+        <div class="container">
+            <h2>AIClips in Action</h2>
+            <img src="https://raw.githubusercontent.com/yyaadet/aiclips/main/screenshots/home.png" alt="AIClips Interface" class="screenshot">
+        </div>
+    </section>
+</body>
+</html>
